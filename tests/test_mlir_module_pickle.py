@@ -1,3 +1,5 @@
+# Copyright (c) 2026 imec
+# SPDX-License-Identifier: MIT
 """
 Unit tests for MLIRModule pickle support.
 

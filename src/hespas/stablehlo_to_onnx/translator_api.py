@@ -1,3 +1,5 @@
+# Copyright (c) 2026 imec
+# SPDX-License-Identifier: MIT
 """
 Public API for StableHLO-to-ONNX translation.
 

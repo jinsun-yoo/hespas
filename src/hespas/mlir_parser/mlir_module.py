@@ -1,3 +1,5 @@
+# Copyright (c) 2026 imec
+# SPDX-License-Identifier: MIT
 """
 MLIR Module wrapper class for handling split MLIR modules with metadata.
 
