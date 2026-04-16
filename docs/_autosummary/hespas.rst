@@ -15,6 +15,5 @@ hespas
    event_counters
    hespas_chakra_gen
    mlir_parser
-   stablehlo_to_onnx
    statistics
    utils

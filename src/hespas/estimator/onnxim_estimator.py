@@ -12,9 +12,12 @@ from .check_available import EstimatorNotAvailableError
 try:
     import onnx
     from onnx import checker
-    from ..stablehlo_to_onnx.translator_api import stablehlo_ops_to_onnx_model
+    from stablehlo_to_onnx.translator_api import stablehlo_ops_to_onnx_model
 except ImportError as e:
-    raise EstimatorNotAvailableError("Unable to import onnx: '{}'".format(e), "onnx") from e
+    raise EstimatorNotAvailableError(
+        "Unable to import ONNX / StableHLO translation dependencies: '{}'".format(e),
+        "onnxim",
+    ) from e
 from .estimator import register_op_handler
 from .config_option import ConfigOption
 from .result import OpResult

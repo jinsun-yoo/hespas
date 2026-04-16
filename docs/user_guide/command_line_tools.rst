@@ -88,16 +88,3 @@ Analyzes MLIR files and provides statistics on StableHLO operator counts.
 Options: ``-s`` / ``--input_sensitive`` (input-sensitive operator matching),
 ``-f`` / ``--format FORMAT`` (table/csv output), ``-e`` / ``--expand_func_calls``
 (expand function calls in the output)
-
-StableHLO to ONNX Converter
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Translates a StableHLO ``.mlir`` file to ONNX format. Useful for interfacing with
-ONNX-based estimators and analysis tools.
-
-::
-
-    hespas_stablehlo_to_onnx MLIR_PATH OUT_PATH [OPTIONS]
-
-Options: ``--model-name MODEL_NAME`` (name of the ONNX model, default: ``stablehlo_model``),
-``--no-fallback`` (disable fallback for unsupported ops)

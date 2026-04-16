@@ -20,11 +20,6 @@ def pytest_collection_modifyitems(config, items):
     for estimator_name, display_name in optional_estimator_skips:
         skips[estimator_name] = (not estimator_available(estimator_name) or get_conditions(estimator_name) is not None, "{} not available".format(display_name))
 
-    try:
-        import src.hespas.stablehlo_to_onnx.translator
-    except ModuleNotFoundError:
-        skips["stablehlo_to_onnx"] = (True, "StableHLO to ONNX translator not available")
-
     for item in items:
         for marker, (do_skip, skip_reason) in skips.items():
             if marker in item.keywords and do_skip:

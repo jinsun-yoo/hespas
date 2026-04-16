@@ -34,7 +34,7 @@ Hespas supports several optional estimator backends. Install them as needed:
    # ZigZag architectural simulator
    pip install ".[zigzag_onnx]"
 
-   # StableHLO to ONNX conversion
+   # External StableHLO to ONNX translation package
    pip install ".[stablehlo_to_onnx]"
 
 Running Tests

@@ -55,7 +55,6 @@ hespas_chakra_gen configs/nodes/A100_PCIe_40GB/roofline/config.json \
 | `hespas_chakra_gen` | Main tool — split, estimate, and generate Chakra traces |
 | `hespas_mlir_splitter` | Split MLIR into compute/communication modules |
 | `hespas_mlir_analyzer` | Analyze StableHLO operator statistics |
-| `hespas_stablehlo_to_onnx` | Convert StableHLO to ONNX format |
 
 ## Publication
 

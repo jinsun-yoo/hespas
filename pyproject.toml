@@ -45,18 +45,12 @@ iree = [
 ]
 
 stablehlo_to_onnx = [
-    "onnxruntime",
-    "jax2onnx",
-    "onnx-ir",
-    "numpy"
+    "stablehlo_to_onnx @ git+https://github.com/imec-int/stablehlo_to_onnx.git"
 ]
 
 zigzag_onnx = [
     "zigzag-dse @ git+https://github.com/KULeuven-MICAS/zigzag.git",
-    "onnxruntime",
-    "jax2onnx",
-    "onnx-ir",
-    "numpy"
+    "stablehlo_to_onnx @ git+https://github.com/imec-int/stablehlo_to_onnx.git"
 ]
 
 [build-system]
@@ -67,7 +61,6 @@ build-backend = "setuptools.build_meta"
 hespas_mlir_analyzer = "hespas.mlir_parser.mlir_analyzer:main"
 hespas_mlir_splitter = "hespas.mlir_parser.mlir_splitter:main"
 hespas_chakra_gen = "hespas.hespas_chakra_gen:main"
-hespas_stablehlo_to_onnx = "hespas.stablehlo_to_onnx.__main__:main"
 
 [tool.pytest.ini_options]
 markers = [
@@ -76,6 +69,5 @@ markers = [
     "iree",
     "cocossim",
     "onnxim",
-    "zigzag_onnx",
-    "stablehlo_to_onnx"
+    "zigzag_onnx"
 ]

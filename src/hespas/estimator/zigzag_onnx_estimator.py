@@ -11,7 +11,7 @@ from .check_available import EstimatorNotAvailableError
 try:
     import onnx
     #from zigzag.api import get_hardware_performance_zigzag
-    from ..stablehlo_to_onnx.translator_api import stablehlo_ops_to_onnx_model
+    from stablehlo_to_onnx.translator_api import stablehlo_ops_to_onnx_model
     from zigzag.mapping.temporal_mapping import TemporalMappingType
     from zigzag.stages.evaluation.cost_model_evaluation import CostModelStage
     from zigzag.stages.main import MainStage
@@ -22,7 +22,10 @@ try:
     from zigzag.stages.results.reduce_stages import MinimalLatencyStage, SumStage
     from zigzag.stages.workload_iterator import WorkloadStage
 except ImportError as e:
-    raise EstimatorNotAvailableError("Unable to import zigzag: '{}'".format(e), "zigzag") from e
+    raise EstimatorNotAvailableError(
+        "Unable to import ZigZag / StableHLO translation dependencies: '{}'".format(e),
+        "zigzag_onnx",
+    ) from e
 from ..utils.num_tools import pos_int
 from .estimator import ConfigOption, register_op_handler
 from .result import OpResult
