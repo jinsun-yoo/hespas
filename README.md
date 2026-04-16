@@ -1,5 +1,7 @@
 # Hespas
 
+📖 **[Documentation](https://imec-int.github.io/hespas/)**
+
 Hespas is a distributed ML performance estimation tool built on [StableHLO](https://openxla.org/stablehlo).
 It takes a StableHLO workload representation of an ML model, splits it into compute and
 communication regions, estimates compute performance using analytical, simulation, or
