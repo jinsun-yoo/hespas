@@ -1,11 +1,12 @@
 ISPASS 2026 Workshop
 ====================
 
-This tutorial walks through an end-to-end example of using Hespas — a
-distributed ML performance estimation tool built on StableHLO — to estimate
+This tutorial walks through an end-to-end example of using Hespas, a
+distributed ML performance estimation tool built on StableHLO, to estimate
 the performance of a **100M parameter LLM model (LLaMA 3 architecture) on 4× A100
-SXM 40GB GPUs**. We demonstrate how the same StableHLO workload representation that is used for running the refernce run can be targeted with analytical and
-profiling-based (XLA) estimators and then fed into a network simulator to produce
+SXM 40GB GPUs**.
+
+We demonstrate how the same StableHLO workload representation that is used for running the refernce run can be targeted with analytical and profiling-based (XLA) estimators and then fed into a network simulator to produce
 end-to-end distributed training time estimates.
 
 1. `Obtaining the Workload`_ — get a StableHLO workload
@@ -445,6 +446,7 @@ real GPU hardware.
        --mlir_file hespas_workloads/llama3-100m.mlir \
        --output output/xla \
        --num_npus 4 \
+       --split_fn linear_split \
        --log-level info
 
 Output:
